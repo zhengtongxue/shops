@@ -1,4 +1,6 @@
-﻿﻿namespace Ch01
+﻿﻿using System;
+
+ namespace Ch01
 {
     internal class Movie
     {
@@ -10,7 +12,22 @@
         public Movie(string title, int priceCode)
         {
             Title = title;
-            _price = new Price();
+
+            switch (priceCode)
+            {
+                case Children:
+                    _price = new ChildrenPrice();
+                    break;
+                case Regular:
+                    _price = new RegularPrice();
+                    break;
+                case NewRelease:
+                    _price = new NewReleasePrice();
+                    break;
+                default:
+                    throw new Exception("error pricode input");
+            }
+            
             PriceCode = priceCode;
         }
 
@@ -68,6 +85,18 @@
 
             return renterPoints;
         }
+    }
+
+    internal class NewReleasePrice : Price
+    {
+    }
+
+    internal class RegularPrice : Price
+    {
+    }
+
+    internal class ChildrenPrice : Price
+    {
     }
 
     internal class Price
