@@ -26,17 +26,12 @@ namespace Ch01
             foreach (var rental in _rentals)
             {
                 //show figures for this rental
-                textWriter.WriteLine(CountDetail(rental));
+                textWriter.WriteLine(rental.CountDetail());
             }
             
             textWriter.WriteLine("本次费用合计： " + CountTotalAmount());
             textWriter.WriteLine("累计获得" + CountFrequentRenterPoints() + " 积分。");
             return textWriter.ToString();
-        }
-
-        private static string CountDetail(Rental rental)
-        {
-            return rental.Movie.Title + ":" + CountThisAmount(rental);
         }
 
         private int CountFrequentRenterPoints()
@@ -60,44 +55,10 @@ namespace Ch01
             double totalAmount = 0;
             foreach (var rental in _rentals)
             {
-                totalAmount += CountThisAmount(rental);
+                totalAmount += rental.CountThisAmount();
             }
 
             return totalAmount;
-        }
-
-        private static double CountThisAmount(Rental rental)
-        {
-            double thisAmount = 0;
-
-            switch (rental.Movie.PriceCode)
-            {
-                case Movie.Regular:
-                {
-                    thisAmount += 2;
-                    if (rental.DayRented > 2)
-                    {
-                        thisAmount += (rental.DayRented - 2) * 1.5;
-                    }
-                }
-                    break;
-                case Movie.NewRelease:
-                {
-                    thisAmount += rental.DayRented * 3;
-                }
-                    break;
-                case Movie.Children:
-                {
-                    thisAmount += 1.5;
-                    if (rental.DayRented > 3)
-                    {
-                        thisAmount += (rental.DayRented - 3) * 1.5;
-                    }
-                }
-                    break;
-            }
-
-            return thisAmount;
         }
     }
 }
