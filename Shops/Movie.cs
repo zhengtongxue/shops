@@ -1,4 +1,4 @@
-﻿﻿namespace Ch01
+﻿﻿namespace Shops
 {
     internal class Movie
     {

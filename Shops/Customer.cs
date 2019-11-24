@@ -1,7 +1,7 @@
-﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 
-namespace Ch01
+namespace Shops
 {
     internal class Customer
     {
