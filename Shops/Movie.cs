@@ -41,8 +41,15 @@
 
         public double CountThisAmount(int dayRented)
         {
+            var price = _price;
+            return CountThisAmount(dayRented, price);
+        }
+
+        private static double CountThisAmount(int dayRented, Price price)
+        {
             double thisAmount = 0;
-            switch (_price.PriceCode)
+
+            switch (price.PriceCode)
             {
                 case Regular:
                 {
