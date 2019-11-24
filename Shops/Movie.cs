@@ -49,21 +49,7 @@
         {
             var price = _price;
 
-            return CountRenterPoints(dayRented, price);
-        }
-
-        private static int CountRenterPoints(int dayRented, Price price)
-        {
-            int renterPoints = 0;
-            renterPoints++;
-
-
-            if (price.PriceCode == NewRelease && dayRented > 1)
-            {
-                renterPoints++;
-            }
-
-            return renterPoints;
+            return price.CountRenterPoints(dayRented);
         }
     }
 
@@ -110,5 +96,19 @@
         public int PriceCode { get; set; }
 
         public abstract double CountThisAmount(int dayRented);
+
+        public int CountRenterPoints(int dayRented)
+        {
+            int renterPoints = 0;
+            renterPoints++;
+
+
+            if (PriceCode == Movie.NewRelease && dayRented > 1)
+            {
+                renterPoints++;
+            }
+
+            return renterPoints;
+        }
     }
 }
