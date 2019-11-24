@@ -50,7 +50,7 @@
             int renterPoints = 0;
             renterPoints++;
 
-            if (PriceCode == NewRelease && dayRented > 1)
+            if (_price.PriceCode == NewRelease && dayRented > 1)
             {
                 renterPoints++;
             }
