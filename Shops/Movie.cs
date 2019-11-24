@@ -42,8 +42,7 @@
         public double CountThisAmount(int dayRented)
         {
             double thisAmount = 0;
-
-            switch (PriceCode)
+            switch (_price.PriceCode)
             {
                 case Regular:
                 {
