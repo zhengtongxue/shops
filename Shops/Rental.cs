@@ -14,30 +14,32 @@
 
         public double CountThisAmount()
         {
+            var dayRented = DayRented;
+            
             double thisAmount = 0;
-
+            
             switch (Movie.PriceCode)
             {
                 case Movie.Regular:
                 {
                     thisAmount += 2;
-                    if (DayRented > 2)
+                    if (dayRented > 2)
                     {
-                        thisAmount += (DayRented - 2) * 1.5;
+                        thisAmount += (dayRented - 2) * 1.5;
                     }
                 }
                     break;
                 case Movie.NewRelease:
                 {
-                    thisAmount += DayRented * 3;
+                    thisAmount += dayRented * 3;
                 }
                     break;
                 case Movie.Children:
                 {
                     thisAmount += 1.5;
-                    if (DayRented > 3)
+                    if (dayRented > 3)
                     {
-                        thisAmount += (DayRented - 3) * 1.5;
+                        thisAmount += (dayRented - 3) * 1.5;
                     }
                 }
                     break;
