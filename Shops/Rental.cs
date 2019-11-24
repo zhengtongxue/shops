@@ -1,4 +1,4 @@
-﻿﻿namespace Ch01
+﻿﻿ namespace Shops
 {
     internal class Rental
     {
@@ -8,9 +8,9 @@
             DayRented = dayRented;
         }
 
-        public int DayRented { get; }
+        private int DayRented { get; }
 
-        public Movie Movie { get; }
+        private Movie Movie { get; }
 
         public double CountThisAmount()
         {

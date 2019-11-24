@@ -1,0 +1,167 @@
+commit a630f439029d82ef2dee8063bd858e8013ee2a67
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:12:30 2019 +0800
+
+    整理，电影的类型是固定，变化的是电影类型的计费方式不同，所以将计费方式设计成可以变化的类
+
+commit af4c53165499d1d4c4d037bd17059bca696e511d
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:09:41 2019 +0800
+
+    删除中间的过度变量
+
+commit bb2a8ac13e8e650c9078286fc31a046791768817
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:09:07 2019 +0800
+
+    删除中间的过度变量
+
+commit eb9126c1a77f87184ed91a2f34ad074c24de4083
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:07:48 2019 +0800
+
+    替换验证无误后删除不需要的条件判断
+
+commit a868ff31bb42523e61446f6548b2f55c5a477fd7
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:06:35 2019 +0800
+
+    观察发现有条件判断，而该条件已经子类化
+
+commit 9ace077f23a6aaec7f54b5c092719be3d39f6071
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:04:46 2019 +0800
+
+    转移函数
+
+commit c62810b8df78ccd02cb6eb9eacfa50bb0766c63c
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:04:12 2019 +0800
+
+    提取函数
+
+commit 2fe67da742a31e426a37b8619adb5ee6ca87e173
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:03:29 2019 +0800
+
+    增加临时变量，准备提取函数
+
+commit 6b135fb40d99dece87ee84fb5bc29f6eb9cfa536
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:02:53 2019 +0800
+
+    将条件判断依赖的变量替换为该变量类化后的变量
+
+commit 0b00e6cea83ad5f300051d31504aea1de69fdae6
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 11:00:38 2019 +0800
+
+    观察发现方法被每个子类重写，将父类abstract化
+
+commit af437000d49c232d0e82c884efd4c46435806db3
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:59:02 2019 +0800
+
+    子类重载父类的方法
+
+commit 9ecb6c3f037d1f17f52ba90adcabe852d8eb6be3
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:57:23 2019 +0800
+
+    提取函数，将静态函数转移到非静态函数中，同时子类重载父类的方法
+
+commit 929f0e157504de2a7d078b25ac19f340b5fde658
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:54:23 2019 +0800
+
+    增加临时变量，准备提取函数
+
+commit 95f144a9eeeb8396bebb5f95f4ea5be26186def4
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:50:48 2019 +0800
+
+    将判断依据改为使用变量类化后的变量引用
+
+commit 2302ba2e963960a3494803079c465a4ce13c46db
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:45:13 2019 +0800
+
+    将判断条件类化，将条件判断输出改为条件判断输入
+
+commit d40e7f79d5fad5c0ce27b3ab6f464c1f2da6b2d5
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:37:19 2019 +0800
+
+    条件判断依据使用get方法
+
+commit c6f2210b14f550ad8f9be1b90e36b316176280cf
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:31:14 2019 +0800
+
+    去除不必要的引用
+
+commit 648d52dba0438f7f42fcc5133eb167dc5e83ea3a
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:29:20 2019 +0800
+
+    基于不要使用他人的变量作为判断依据的原则将方法继续迁移到新类中
+
+commit 4b9217d40b97c973a34beb5904f928ccf845ee38
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:28:22 2019 +0800
+
+    增加临时变量，准备提取函数
+
+commit 4bba920daa63562c0728b4051775489f5dc542aa
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:26:48 2019 +0800
+
+    基于一行只有一个点的原则将方法继续迁移到新类中
+
+commit f630452609e4ef0bfecce36779e164b0757e7b5d
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:25:27 2019 +0800
+
+    '提取函数'
+
+commit 44568c778ab2d2773e0cab6110ca3e8ec8e86a76
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:24:08 2019 +0800
+
+    增加临时变量，准备提取函数
+
+commit af8bfce452f05bd345e75b4a8c74d1941e4b39a5
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:21:38 2019 +0800
+
+    观察发现静态函数的参数只是一个类，转为非静态方法
+
+commit 9caf99c35af04e03652a68741bf37ad593c2659c
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:20:31 2019 +0800
+
+    增加临时变量，准备提取函数
+
+commit 27b1db083a0e17f8af0df5b645acd3780d6e26a2
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:19:24 2019 +0800
+
+    观察发现静态函数的参数只是一个类，转为非静态方法
+
+commit 6e1adfaf23a5b58410845f1959374b1354adad0f
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:14:42 2019 +0800
+
+    '提取函数实现函数职能单一化，内联函数减少临时变量'
+
+commit 099f8df66a8b2fcf67db067d7b18b1e3f581d370
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:06:58 2019 +0800
+
+    '提取函数'
+
+commit c044d4d77bd4f01e67f3b7c69b083b160ae2f478
+Author: zhengtongxue <209665530@qq.com>
+Date:   Sun Nov 24 10:00:41 2019 +0800
+
+    初始文件

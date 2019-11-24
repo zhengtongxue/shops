@@ -17,7 +17,11 @@
     <setting file="file://$PROJECT_DIR$/Shops/Rental.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shops/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestShops/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/Price.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestShops/ProgramTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/ChildrenPrice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/RegularPrice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/NewReleasePrice.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,6 +31,10 @@
         <option value="$PROJECT_DIR$/TestShops/ProgramTests.cs" />
         <option value="$PROJECT_DIR$/Shops/Customer.cs" />
         <option value="$PROJECT_DIR$/Shops/Rental.cs" />
+        <option value="$PROJECT_DIR$/Shops/Price.cs" />
+        <option value="$PROJECT_DIR$/Shops/ChildrenPrice.cs" />
+        <option value="$PROJECT_DIR$/Shops/RegularPrice.cs" />
+        <option value="$PROJECT_DIR$/Shops/NewReleasePrice.cs" />
         <option value="$PROJECT_DIR$/Shops/Movie.cs" />
       </list>
     </option>
@@ -82,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574559649547</updated>
       <workItem from="1574559650968" duration="1063000" />
-      <workItem from="1574560780321" duration="2194000" />
+      <workItem from="1574560780321" duration="4445000" />
     </task>
     <servers />
   </component>

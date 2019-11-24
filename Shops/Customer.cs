@@ -1,13 +1,14 @@
-﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
-namespace Ch01
+namespace Shops
 {
     internal class Customer
     {
         private List<Rental> _rentals = new List<Rental>();
-        
-        public string Name { get; }
+
+        private string Name { get; }
         
         public Customer(string name)
         {
@@ -36,25 +37,12 @@ namespace Ch01
 
         private int CountFrequentRenterPoints()
         {
-            int frequentRenterPoints = 0;
-            foreach (var rental in _rentals)
-            {
-                //add frequentRenterPoints
-                frequentRenterPoints += rental.CountRenterPoints();
-            }
-
-            return frequentRenterPoints;
+            return _rentals.Sum(rental => rental.CountRenterPoints());
         }
 
         private double CountTotalAmount()
         {
-            double totalAmount = 0;
-            foreach (var rental in _rentals)
-            {
-                totalAmount += rental.CountThisAmount();
-            }
-
-            return totalAmount;
+            return _rentals.Sum(rental => rental.CountThisAmount());
         }
     }
 }
