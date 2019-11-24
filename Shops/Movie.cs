@@ -27,16 +27,9 @@
                 default:
                     throw new Exception("error pricode input");
             }
-            
         }
 
         public string Title { get; }
-
-        public int PriceCode
-        {
-            get { return _price.PriceCode; }
-            set { _price.PriceCode = value; }
-        }
 
         public double CountThisAmount(int dayRented)
         {
