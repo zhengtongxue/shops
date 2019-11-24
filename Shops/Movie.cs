@@ -49,5 +49,18 @@
 
             return thisAmount;
         }
+
+        public int CountRenterPoints(int dayRented)
+        {
+            int renterPoints = 0;
+            renterPoints++;
+
+            if (this.PriceCode == Movie.NewRelease && dayRented > 1)
+            {
+                renterPoints++;
+            }
+
+            return renterPoints;
+        }
     }
 }

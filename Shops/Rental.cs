@@ -26,20 +26,7 @@
         {
             var dayRented = DayRented;
 
-            return CountRenterPoints(dayRented);
-        }
-
-        private int CountRenterPoints(int dayRented)
-        {
-            int renterPoints = 0;
-            renterPoints++;
-
-            if (Movie.PriceCode == Movie.NewRelease && dayRented > 1)
-            {
-                renterPoints++;
-            }
-
-            return renterPoints;
+            return Movie.CountRenterPoints(dayRented);
         }
     }
 }
