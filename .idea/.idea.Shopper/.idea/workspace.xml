@@ -13,6 +13,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Shops/Customer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/Movie.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shops/Rental.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shops/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestShops/Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestShops/ProgramTests.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,6 +25,9 @@
         <option value="$PROJECT_DIR$/Shops/Program.cs" />
         <option value="$PROJECT_DIR$/TestShops/Tests.cs" />
         <option value="$PROJECT_DIR$/TestShops/ProgramTests.cs" />
+        <option value="$PROJECT_DIR$/Shops/Customer.cs" />
+        <option value="$PROJECT_DIR$/Shops/Rental.cs" />
+        <option value="$PROJECT_DIR$/Shops/Movie.cs" />
       </list>
     </option>
   </component>
@@ -46,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -77,13 +82,14 @@
       <option name="presentableId" value="Default" />
       <updated>1574559649547</updated>
       <workItem from="1574559650968" duration="1063000" />
+      <workItem from="1574560780321" duration="2194000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />

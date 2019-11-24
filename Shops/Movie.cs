@@ -2,6 +2,7 @@
 {
     internal class Movie
     {
+        private Price _price;
         public const int Children = 2; //儿童片
         public const int Regular = 0;//普通片
         public const int NewRelease = 1;//新片
@@ -9,12 +10,17 @@
         public Movie(string title, int priceCode)
         {
             Title = title;
+            _price = new Price();
             PriceCode = priceCode;
         }
 
         public string Title { get; }
 
-        public int PriceCode { get; set; }
+        public int PriceCode
+        {
+            get { return _price.PriceCode; }
+            set { _price.PriceCode = value; }
+        }
 
         public double CountThisAmount(int dayRented)
         {
@@ -62,5 +68,10 @@
 
             return renterPoints;
         }
+    }
+
+    internal class Price
+    {
+        public int PriceCode { get; set; }
     }
 }
