@@ -67,7 +67,6 @@
             int renterPoints = 0;
             renterPoints++;
 
-
             if (dayRented > 1)
             {
                 renterPoints++;
@@ -115,13 +114,6 @@
         {
             int renterPoints = 0;
             renterPoints++;
-
-
-            if (PriceCode == Movie.NewRelease && dayRented > 1)
-            {
-                renterPoints++;
-            }
-
             return renterPoints;
         }
     }
