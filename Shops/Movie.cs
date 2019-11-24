@@ -28,7 +28,6 @@
                     throw new Exception("error pricode input");
             }
             
-            PriceCode = priceCode;
         }
 
         public string Title { get; }
@@ -41,15 +40,12 @@
 
         public double CountThisAmount(int dayRented)
         {
-            var price = _price;
-            return price.CountThisAmount(dayRented);
+            return _price.CountThisAmount(dayRented);
         }
 
         public int CountRenterPoints(int dayRented)
         {
-            var price = _price;
-
-            return price.CountRenterPoints(dayRented);
+            return _price.CountRenterPoints(dayRented);
         }
     }
 
