@@ -42,41 +42,7 @@
         public double CountThisAmount(int dayRented)
         {
             var price = _price;
-            return CountThisAmount(dayRented, price);
-        }
-
-        private static double CountThisAmount(int dayRented, Price price)
-        {
-            double thisAmount = 0;
-
-            switch (price.PriceCode)
-            {
-                case Regular:
-                {
-                    thisAmount += 2;
-                    if (dayRented > 2)
-                    {
-                        thisAmount += (dayRented - 2) * 1.5;
-                    }
-                }
-                    break;
-                case NewRelease:
-                {
-                    thisAmount += dayRented * 3;
-                }
-                    break;
-                case Children:
-                {
-                    thisAmount += 1.5;
-                    if (dayRented > 3)
-                    {
-                        thisAmount += (dayRented - 3) * 1.5;
-                    }
-                }
-                    break;
-            }
-
-            return thisAmount;
+            return price.CountThisAmount(dayRented);
         }
 
         public int CountRenterPoints(int dayRented)
@@ -95,6 +61,12 @@
 
     internal class NewReleasePrice : Price
     {
+        public override double CountThisAmount(int dayRented)
+        {
+            double thisAmount = 0;
+            thisAmount += dayRented * 3;
+            return thisAmount;
+        }
     }
 
     internal class RegularPrice : Price
@@ -108,5 +80,39 @@
     internal class Price
     {
         public int PriceCode { get; set; }
+
+        public virtual double CountThisAmount(int dayRented)
+        {
+            double thisAmount = 0;
+
+            switch (PriceCode)
+            {
+                case Movie.Regular:
+                {
+                    thisAmount += 2;
+                    if (dayRented > 2)
+                    {
+                        thisAmount += (dayRented - 2) * 1.5;
+                    }
+                }
+                    break;
+                case Movie.NewRelease:
+                {
+                    thisAmount += dayRented * 3;
+                }
+                    break;
+                case Movie.Children:
+                {
+                    thisAmount += 1.5;
+                    if (dayRented > 3)
+                    {
+                        thisAmount += (dayRented - 3) * 1.5;
+                    }
+                }
+                    break;
+            }
+
+            return thisAmount;
+        }
     }
 }
