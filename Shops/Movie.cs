@@ -61,6 +61,20 @@
             thisAmount += dayRented * 3;
             return thisAmount;
         }
+
+        public override int CountRenterPoints(int dayRented)
+        {
+            int renterPoints = 0;
+            renterPoints++;
+
+
+            if (dayRented > 1)
+            {
+                renterPoints++;
+            }
+
+            return renterPoints;
+        }
     }
 
     internal class RegularPrice : Price
@@ -97,7 +111,7 @@
 
         public abstract double CountThisAmount(int dayRented);
 
-        public int CountRenterPoints(int dayRented)
+        public virtual int CountRenterPoints(int dayRented)
         {
             int renterPoints = 0;
             renterPoints++;
