@@ -15,9 +15,14 @@
         public double CountThisAmount()
         {
             var dayRented = DayRented;
-            
+
+            return CountThisAmount(dayRented);
+        }
+
+        private double CountThisAmount(int dayRented)
+        {
             double thisAmount = 0;
-            
+
             switch (Movie.PriceCode)
             {
                 case Movie.Regular:
