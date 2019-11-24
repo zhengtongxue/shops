@@ -20,9 +20,9 @@
         {
             double thisAmount = 0;
 
-            switch (this.PriceCode)
+            switch (PriceCode)
             {
-                case Movie.Regular:
+                case Regular:
                 {
                     thisAmount += 2;
                     if (dayRented > 2)
@@ -31,12 +31,12 @@
                     }
                 }
                     break;
-                case Movie.NewRelease:
+                case NewRelease:
                 {
                     thisAmount += dayRented * 3;
                 }
                     break;
-                case Movie.Children:
+                case Children:
                 {
                     thisAmount += 1.5;
                     if (dayRented > 3)
@@ -55,7 +55,7 @@
             int renterPoints = 0;
             renterPoints++;
 
-            if (this.PriceCode == Movie.NewRelease && dayRented > 1)
+            if (PriceCode == NewRelease && dayRented > 1)
             {
                 renterPoints++;
             }

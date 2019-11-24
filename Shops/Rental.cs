@@ -24,9 +24,7 @@
 
         public int CountRenterPoints()
         {
-            var dayRented = DayRented;
-
-            return Movie.CountRenterPoints(dayRented);
+            return Movie.CountRenterPoints(DayRented);
         }
     }
 }
