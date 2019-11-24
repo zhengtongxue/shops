@@ -40,11 +40,14 @@ namespace Ch01
             foreach (var rental in _rentals)
             {
                 //add frequentRenterPoints
-                frequentRenterPoints++;
+                int renterPoints = 0;
+                renterPoints++;
                 if (rental.Movie.PriceCode == Movie.NewRelease && rental.DayRented > 1)
                 {
-                    frequentRenterPoints++;
+                    renterPoints++;
                 }
+
+                frequentRenterPoints += renterPoints;
             }
 
             return frequentRenterPoints;
