@@ -48,11 +48,16 @@
         public int CountRenterPoints(int dayRented)
         {
             var price = _price;
-            
+
+            return CountRenterPoints(dayRented, price);
+        }
+
+        private static int CountRenterPoints(int dayRented, Price price)
+        {
             int renterPoints = 0;
             renterPoints++;
 
-            
+
             if (price.PriceCode == NewRelease && dayRented > 1)
             {
                 renterPoints++;
