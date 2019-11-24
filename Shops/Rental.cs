@@ -24,9 +24,17 @@
 
         public int CountRenterPoints()
         {
+            var dayRented = DayRented;
+
+            return CountRenterPoints(dayRented);
+        }
+
+        private int CountRenterPoints(int dayRented)
+        {
             int renterPoints = 0;
             renterPoints++;
-            if (Movie.PriceCode == Movie.NewRelease && DayRented > 1)
+
+            if (Movie.PriceCode == Movie.NewRelease && dayRented > 1)
             {
                 renterPoints++;
             }
