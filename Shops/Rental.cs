@@ -50,5 +50,17 @@
         {
             return Movie.Title + ":" + CountThisAmount();
         }
+
+        public int CountRenterPoints()
+        {
+            int renterPoints = 0;
+            renterPoints++;
+            if (Movie.PriceCode == Movie.NewRelease && DayRented > 1)
+            {
+                renterPoints++;
+            }
+
+            return renterPoints;
+        }
     }
 }
