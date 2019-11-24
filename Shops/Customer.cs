@@ -21,27 +21,49 @@ namespace Ch01
 
         public string Statement()
         {
-            double totalAmount = 0;
-            int frequentRenterPoints = 0;
             TextWriter textWriter = new StringWriter();
             textWriter.WriteLine("租借人：" + Name);
             foreach (var rental in _rentals)
             {
+                //show figures for this rental
+                textWriter.WriteLine(CountDetail(rental));
+            }
+            
+            textWriter.WriteLine("本次费用合计： " + CountTotalAmount());
+            textWriter.WriteLine("累计获得" + CountFrequentRenterPoints() + " 积分。");
+            return textWriter.ToString();
+        }
+
+        private static string CountDetail(Rental rental)
+        {
+            return rental.Movie.Title + ":" + CountThisAmount(rental);
+        }
+
+        private int CountFrequentRenterPoints()
+        {
+            int frequentRenterPoints = 0;
+            foreach (var rental in _rentals)
+            {
                 //add frequentRenterPoints
                 frequentRenterPoints++;
-                if (rental.Movie.PriceCode == Movie.NewRelease && rental.DayRented>1)
+                if (rental.Movie.PriceCode == Movie.NewRelease && rental.DayRented > 1)
                 {
                     frequentRenterPoints++;
                 }
+            }
 
-                //show figures for this rental
-                textWriter.WriteLine(rental.Movie.Title + ":" + CountThisAmount(rental));
+            return frequentRenterPoints;
+        }
+
+        private double CountTotalAmount()
+        {
+            double totalAmount = 0;
+            foreach (var rental in _rentals)
+            {
                 totalAmount += CountThisAmount(rental);
             }
-            
-            textWriter.WriteLine("本次费用合计： " + totalAmount);
-            textWriter.WriteLine("累计获得" + frequentRenterPoints + " 积分。");
-            return textWriter.ToString();
+
+            return totalAmount;
         }
 
         private static double CountThisAmount(Rental rental)
